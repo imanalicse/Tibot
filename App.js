@@ -65,7 +65,7 @@ export default TabNavigator({
     animationEnabled: false,
     swipeEnabled: false,
   });
-
+console.log('aaaaa');
 // type Props = {};
 // export default class App extends Component<Props> {
 //   render() {

@@ -31,12 +31,25 @@ export class HomeScreen extends React.Component {
   static navigationOptions = {
     title: 'Tibot',
     tabBarLabel: 'Home',
-    tabBarIcon: ({ tintColor, focused }) => (
-      <Image
-        source={require('../assets/images/home-icon.png')}
+    tabBarIcon: ({ focused, tintColor }) => {
+      if(focused){
+        return <Image
+        source={require('../assets/images/home-icon-active.png')}
         style={{ width: 32, height: 32 }}
-      />
-    ),
+      />  
+      }else{
+      return <Image
+          source={require('../assets/images/home-icon.png')}
+          style={{ width: 32, height: 32 }}
+        />
+      }
+    },
+    // tabBarIcon: ({ tintColor, focused }) => (
+    //   <Image
+    //     source={require('../assets/images/home-icon.png')}
+    //     style={{ width: 32, height: 32 }}
+    //   />
+    // ),
     headerStyle: {
       backgroundColor: '#9013fe',
     },
@@ -56,7 +69,7 @@ export class HomeScreen extends React.Component {
             />
           </View>
           <View style={styles.welcome_area}>
-            <Text style={styles.welcome_text}>Hi Md. Iman how can I help you?</Text>
+            <Text style={styles.welcome_text}>Hi Faisal Basar how can I help you?</Text>
           </View>
           <View style={styles.search_area}>
             {/* <Button style={styles.chatButton}

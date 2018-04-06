@@ -20,7 +20,7 @@ export class AppointmentScreen extends React.Component {
 
   render() {
     return (
-      <View style={{ flex: 1 }}>
+      <View style={{ flex: 1, justifyContent:'center', alignItems: 'center' }}>
         <View>
           <Text>Appointment Screen !</Text>
         </View>
