@@ -29,7 +29,7 @@ export class HomeScreen extends React.Component {
   }
 
   static navigationOptions = {
-    title: 'Babylon',
+    title: 'Tibot',
     tabBarLabel: 'Home',
     tabBarIcon: ({ tintColor, focused }) => (
       <Image
@@ -78,11 +78,6 @@ export class HomeScreen extends React.Component {
               onKeyPress={() => this.props.navigation.navigate('Chat')}                        
             /> */}
           </View>
-        </View>
-        <View>
-          <Image
-            source={require('../assets/images/nhs.png')}
-          />
         </View>
       </View>
     );
