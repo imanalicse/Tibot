@@ -8,15 +8,20 @@ import { HomeScreen } from './screens/HomeScreen';
 import { AppointmentScreen } from './screens/AppointmentScreen';
 import { NotificationScreen } from './screens/NotificationScreen';
 import { ProfileScreen } from './screens/ProfileScreen';
-//import { ChatScreen } from './screens/ChatScreen';
+import { ChatScreen } from './screens/ChatScreen';
 
 const HomeStact = StackNavigator({
   Home: { screen: HomeScreen },
-  //Chat: { screen: ChatScreen },
+  Chat: { screen: ChatScreen },
 });
+
 export default TabNavigator({
   Home: { screen: HomeStact },
-  Appointment: { screen: AppointmentScreen },
+  Appointment: {
+    screen: StackNavigator({
+      Appointment: { screen: AppointmentScreen }
+    })
+  },
   Notification: { screen: NotificationScreen },
   Me: { screen: ProfileScreen },
 }, {

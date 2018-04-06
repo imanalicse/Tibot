@@ -5,8 +5,7 @@ export class AppointmentScreen extends React.Component {
 
   static navigationOptions = {
     title: 'Appoitment',
-    tabBarLabel: 'Appoitment',
-    headerRight: <Button><Text>asd</Text></Button>,
+    tabBarLabel: 'Appoitment',    
     tabBarIcon: ({ tintColor, focused }) => (
       <Image
         source={require('../assets/images/appointment-icon.png')}
