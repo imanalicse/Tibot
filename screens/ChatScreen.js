@@ -38,13 +38,7 @@ const chatScript = {
 export class ChatScreen extends React.Component {
   static navigationOptions = {
     title: 'Tibot',
-    tabBarIcon: ({ focused, tintColor }) => {
-      if (focused) {
-        return <Image source={require('../assets/images/home-icon-active.png')} />
-      } else {
-        return <Image source={require('../assets/images/home-icon.png')} />
-      }
-    },
+    tabBarVisible: false,    
     headerStyle: {
       backgroundColor: '#9013fe',
     },
@@ -53,8 +47,7 @@ export class ChatScreen extends React.Component {
   render() {
     return (
       <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>        
-        <View style={{ flex: 1 }}>
-          <Text> Chat Screen </Text>          
+        <View>          
           <ChatFlow
             chatScript={chatScript}
           />
