@@ -32,24 +32,12 @@ export class HomeScreen extends React.Component {
     title: 'Tibot',
     tabBarLabel: 'Home',
     tabBarIcon: ({ focused, tintColor }) => {
-      if(focused){
-        return <Image
-        source={require('../assets/images/home-icon-active.png')}
-        style={{ width: 32, height: 32 }}
-      />  
-      }else{
-      return <Image
-          source={require('../assets/images/home-icon.png')}
-          style={{ width: 32, height: 32 }}
-        />
+      if (focused) {
+        return <Image source={require('../assets/images/home-icon-active.png')} />
+      } else {
+        return <Image source={require('../assets/images/home-icon.png')} />
       }
-    },
-    // tabBarIcon: ({ tintColor, focused }) => (
-    //   <Image
-    //     source={require('../assets/images/home-icon.png')}
-    //     style={{ width: 32, height: 32 }}
-    //   />
-    // ),
+    },    
     headerStyle: {
       backgroundColor: '#9013fe',
     },

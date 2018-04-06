@@ -6,12 +6,13 @@ export class ProfileScreen extends React.Component {
   static navigationOptions = {
     title: 'Me',
     tabBarLabel: 'Me',
-    tabBarIcon: ({ tintColor, focused }) => (
-      <Image
-        source={require('../assets/images/profile-icon.png')}
-        style={{ width: 32, height: 32 }}
-      />
-    ),
+    tabBarIcon: ({ focused, tintColor }) => {
+      if (focused) {
+        return <Image source={require('../assets/images/profile-icon-active.png')} />
+      } else {
+        return <Image source={require('../assets/images/profile-icon.png')} />
+      }
+    },
     headerStyle: {
       backgroundColor: '#9013fe',
     },
