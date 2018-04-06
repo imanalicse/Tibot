@@ -22,8 +22,16 @@ export default TabNavigator({
       Appointment: { screen: AppointmentScreen }
     })
   },
-  Notification: { screen: NotificationScreen },
-  Me: { screen: ProfileScreen },
+  Notification: {
+    screen: StackNavigator({
+      Notification: { screen: NotificationScreen }
+    })
+  },
+  Me: {
+    screen: StackNavigator({
+      Me: { screen: ProfileScreen }
+    })
+  },
 }, {
     // navigationOptions: ({ navigation }) => ({
     //   tabBarIcon: ({ focused, tintColor }) => {
@@ -44,6 +52,9 @@ export default TabNavigator({
     //     return <Ionicons name={iconName} size={25} color={tintColor} />;
     //   },
     // }),
+    headerStyle: {
+      backgroundColor: '#9013fe',
+    },
     tabBarComponent: TabBarBottom,
     tabBarPosition: 'bottom',
     tabBarOptions: {

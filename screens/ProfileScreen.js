@@ -12,6 +12,10 @@ export class ProfileScreen extends React.Component {
         style={{ width: 32, height: 32 }}
       />
     ),
+    headerStyle: {
+      backgroundColor: '#9013fe',
+    },
+    headerTintColor: '#fcf5ff',
   };
   render() {
     return (
