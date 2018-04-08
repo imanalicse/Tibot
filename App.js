@@ -9,6 +9,7 @@ import { AppointmentScreen } from './screens/AppointmentScreen';
 import { NotificationScreen } from './screens/NotificationScreen';
 import { ProfileScreen } from './screens/ProfileScreen';
 import { ChatScreen } from './screens/ChatScreen';
+import { FaqScreen } from './screens/FaqScreen';
 
 const HomeStact = StackNavigator({
   Home: { screen: HomeScreen },
@@ -29,7 +30,8 @@ export default TabNavigator({
   },
   Me: {
     screen: StackNavigator({
-      Me: { screen: ProfileScreen }
+      Me: { screen: ProfileScreen },
+      FAQ: { screen: FaqScreen}
     })
   },
 }, {

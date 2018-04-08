@@ -33,8 +33,10 @@ export class ProfileScreen extends React.Component {
               <Image style={styles.element_icon}
                 source={require('../assets/images/info.png')}
               />
-              <View style={styles.element_name}>
-                <Text>FAQ</Text>
+              <View style={styles.element_name}>                
+                <Text
+              onPress={() => this.props.navigation.navigate('FAQ')}
+            >FAQ</Text>
               </View>
             </View>
             <View style={styles.element}>
